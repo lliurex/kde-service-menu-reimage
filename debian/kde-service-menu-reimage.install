@@ -1,0 +1,3 @@
+bin/reimage-kdialog usr/bin/
+ServiceMenus/* usr/share/kservices5/ServiceMenus/
+ 

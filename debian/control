@@ -1,0 +1,17 @@
+Source: kde-service-menu-reimage
+Section: graphics
+Priority: optional
+Maintainer: M.Angel Juan <m.angel.juan@gmail.com>
+Build-Depends: debhelper-compat (= 12)
+Standards-Version: 4.4.1
+Homepage: https://store.kde.org/p/1231579/
+Vcs-Git: https://github.com/lliurex/kde-service-menu-reimage
+
+Package: kde-service-menu-reimage
+Architecture: any
+Depends: ${shlibs:Depends}, ${misc:Depends}
+Description: Manipulate images and their metadata from dolphin service menus.
+ kde-service-menu-reimage is a package that extends the functionalities of
+ Dolphin/Konqueror adding many additionally sensible menu, reachables with right
+ click on the files. It's similar to gnome nautilus actions.
+ These actions are related to picture files.
