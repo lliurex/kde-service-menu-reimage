@@ -25,6 +25,8 @@ TryExec=reimage-kdialog
 Type=Service
 X-KDE-Submenu=ReImage - Tools
 X-KDE-Submenu[it]=ReImage - Utilità
+X-KDE-Submenu[es]=ReImage - Utilidades
+X-KDE-Submenu[ca]=ReImage - Utilitats
 
 ################################################################################
 
@@ -33,12 +35,16 @@ Exec=reimage-kdialog agif %F
 Icon=video-x-mp4
 Name=Create animated GIF
 Name[it]=Crea GIF animata
+Name[es]=Crear GIF animado
+Name[ca]=Crear GIF animat
 
 [Desktop Action append_right]
 Exec=reimage-kdialog montage %F
 Icon=image-flip-horizontal-symbolic
 Name=Append to right
 Name[it]=Appendi immagine a destra
+Name[es]=Añadir imagen a la derecha
+Name[ca]=Afegir imatge a la dreta
 
 ################################################################################
 
@@ -47,18 +53,24 @@ Exec=reimage-kdialog colorspace gray %F
 Icon=viewimage
 Name=GrayScale
 Name[it]=Scala di grigi
+Name[es]=Escala de grises
+Name[ca]=Escala de grises
 
 [Desktop Action sepia]
 Exec=reimage-kdialog sepia 80% %F
 Icon=color-management
 Name=Sepia
 Name[it]=Seppia
+Name[es]=Sepia
+Name[ca]=Sépia
 
 [Desktop Action transparent2color]
 Exec=reimage-kdialog transparent2color %F
 Icon=backgroundtool
 Name=Change transparent to color
 Name[it]=Cambia trasparenza a colore
+Name[es]=Cambiar transparente por un color
+Name[ca]=Canviar transparent per un color
 
 ################################################################################
 
@@ -67,15 +79,21 @@ Exec=reimage-kdialog border custom %F
 Icon=bordertool
 Name=Add colored border
 Name[it]=Aggiungi bordo colorato
+Name[es]=Añadir borde coloreado
+Name[ca]=Afegir vora acolorida
 
 [Desktop Action border_transparent]
 Exec=reimage-kdialog border transparent %F
 Icon=box
 Name=Add transparent border
 Name[it]=Aggiungi bordo trasparente
+Name[es]=Añadir borde transparente
+Name[ca]=Afegir vora transparent
 
 [Desktop Action shadow]
 Exec=reimage-kdialog shadow %F
 Icon=bwtonal
 Name=Drop shadow
 Name[it]=Aggiungi ombra
+Name[es]=Añadir sombra
+Name[ca]=Afegir ombra

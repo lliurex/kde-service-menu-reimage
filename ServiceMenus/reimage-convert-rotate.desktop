@@ -25,6 +25,8 @@ TryExec=reimage-kdialog
 Type=Service
 X-KDE-Submenu=ReImage - Convert and rotate
 X-KDE-Submenu[it]=ReImage - Conversione e rotazione
+X-KDE-Submenu[es]=ReImage - Conversión y rotación
+X-KDE-Submenu[ca]=ReImage - Conversió i rotació
 
 ################################################################################
 
@@ -33,30 +35,40 @@ Exec=reimage-kdialog convert gif %F
 Icon=image-gif
 Name=Convert to GIF
 Name[it]=Converti in GIF
+Name[es]=Convertir en GIF
+Name[ca]=Convertir en GIF
 
 [Desktop Action jpeg]
 Exec=reimage-kdialog convert jpg %F
 Icon=image-jpeg
 Name=Convert to JPEG
 Name[it]=Converti in JPEG
+Name[es]=Convertir en JPEG
+Name[ca]=Convertir en JPEG
 
 [Desktop Action png]
 Exec=reimage-kdialog convert png %F
 Icon=image-png
 Name=Convert to PNG
 Name[it]=Converti in PNG
+Name[es]=Convertir en PNG
+Name[ca]=Convertir en PNG
 
 [Desktop Action tiff]
 Exec=reimage-kdialog convert tif %F
 Icon=image-tiff
 Name=Convert to TIFF
 Name[it]=Converti in TIFF
+Name[es]=Convertir en TIFF
+Name[ca]=Convertir en TIFF
 
 [Desktop Action webp]
 Exec=reimage-kdialog convert webp %F
 Icon=image-webp
 Name=Convert to WEBP
 Name[it]=Converti in WEBP
+Name[es]=Convertir en WEBP
+Name[ca]=Convertir en WEBP
 
 ################################################################################
 
@@ -65,12 +77,16 @@ Exec=reimage-kdialog convert pdf %F
 Icon=application-pdf
 Name=Convert to PDF
 Name[it]=Converti in PDF
+Name[es]=Convertir en PDF
+Name[ca]=Convertir en PDF
 
 [Desktop Action pdfa]
 Exec=reimage-kdialog convert pdfa %F
 Icon=application-pdf
 Name=Convert to PDF/A-1
 Name[it]=Converti in PDF/A-1
+Name[es]=Convertir en PDF/A-1
+Name[ca]=Convertir en PDF/A-1
 
 ################################################################################
 
@@ -79,24 +95,32 @@ Exec=reimage-kdialog favicons all %F
 Icon=image-ico
 Name=Generate favicons
 Name[it]=Genera favicons
+Name[es]=Gerera ficheros favicon
+Name[ca]=Genera arxius favicon
 
 [Desktop Action base64]
 Exec=for i in %F; do cat "$i" | base64 -w0 > "$i".base64; done
 Icon=text-plain
 Name=Convert to Base64
 Name[it]=Converti in Base64
+Name[es]=Convertir en Base64
+Name[ca]=Convertir en Base64
 
 [Desktop Action convert_custom]
 Exec=reimage-kdialog convert custom %F
 Icon=image
 Name=Convert to format ...
 Name[it]=Formato personalizzato ...
+Name[es]=Formato personalizado ...
+Name[ca]=Format personalitzat ...
 
 [Desktop Action formats]
 Exec=reimage-kdialog convert formats
 Icon=view-list-text
 Name=Formats list
 Name[it]=Elenco formati
+Name[es]=Lista de formatos
+Name[ca]=Llista de formats
 
 ################################################################################
 
@@ -105,30 +129,40 @@ Exec=reimage-kdialog rotate 90 %F
 Icon=image-rotate-right-symbolic
 Name=Rotate 90°
 Name[it]=Ruota di 90°
+Name[es]=Rotar 90°
+Name[ca]=Girar 90°
 
 [Desktop Action rotate_180]
 Exec=reimage-kdialog rotate 180 %F
 Icon=image-rotate-right-symbolic
 Name=Rotate 180°
 Name[it]=Ruota di 180°
+Name[es]=Rotar 180°
+Name[ca]=Girar 180°
 
 [Desktop Action rotate_270]
 Exec=reimage-kdialog rotate 270 %F
 Icon=image-rotate-left-symbolic
 Name=Rotate (-90°)
 Name[it]=Ruota di -90°
+Name[es]=Rotar (-90°)
+Name[ca]=Girar (-90°)
 
 [Desktop Action rotate_custom]
 Exec=reimage-kdialog rotate custom %F
 Icon=view-refresh
 Name=Rotate custom
 Name[it]=Angolo personalizzato
+Name[es]=Rotar con ángulo personalizado
+Name[ca]=Girar amb angle personalitzat
 
 [Desktop Action auto]
 Exec=reimage-kdialog rotate auto %F
 Icon=view-refresh
 Name=Auto-rotate with Exif
 Name[it]=Auto-ruota tramite dati Exif
+Name[es]=Rotar automáticamente según Exif
+Name[ca]=Girar automàticament segons Exif
 
 ################################################################################
 
@@ -137,9 +171,13 @@ Exec=reimage-kdialog overturn flip %F
 Icon=image-flip-vertical-symbolic
 Name=Overturn vertically
 Name[it]=Ribalta verticalmente
+Name[es]=Voltear verticalmente
+Name[ca]=Voltejar verticalment
 
 [Desktop Action flop]
 Exec=reimage-kdialog overturn flop %F
 Icon=image-flip-horizontal-symbolic
 Name=Overturn horizontally
 Name[it]=Ribalta orizzontalmente
+Name[es]=Voltear horizontalmente
+Name[ca]=Voltejar horizontalment

@@ -25,6 +25,8 @@ TryExec=reimage-kdialog
 Type=Service
 X-KDE-Submenu=ReImage - Compress and resize
 X-KDE-Submenu[it]=ReImage - Compressione e ridimensionamento
+X-KDE-Submenu[es]=ReImage - Compresión y redimensionamiento
+X-KDE-Submenu[ca]=ReImage - Compressió i redimensionamiento
 
 ################################################################################
 
@@ -33,48 +35,64 @@ Exec=reimage-kdialog progressive %F
 Icon=viewhtml
 Name=Make progressive
 Name[it]=Rendi progressiva
+Name[es]=Hacer progresiva
+Name[ca]=Fer progressiva
 
 [Desktop Action optimize]
 Exec=reimage-kdialog optimize %F
 Icon=viewhtml
 Name=Complete optimization for web
 Name[it]=Ottimizzazione completa per il web
+Name[es]=Optimizar para web
+Name[ca]=Optimitzar per a web
 
 [Desktop Action compress_50]
 Exec=reimage-kdialog compress 50% %F
 Icon=application-x-compressed-tar
 Name=Compress at 50%
 Name[it]=Comprimi al 50%
+Name[es]=Comprimir al 50%
+Name[ca]=Comprimir al 50%
 
 [Desktop Action compress_70]
 Exec=reimage-kdialog compress 70% %F
 Icon=application-x-compressed-tar
 Name=Compress at 70%
 Name[it]=Comprimi al 70%
+Name[es]=Comprimir al 70%
+Name[ca]=Comprimir al 70%
 
 [Desktop Action compress_75]
 Exec=reimage-kdialog compress 75% %F
 Icon=application-x-compressed-tar
 Name=Compress at 75%
 Name[it]=Comprimi al 75%
+Name[es]=Comprimir al 75%
+Name[ca]=Comprimir al 75%
 
 [Desktop Action compress_80]
 Exec=reimage-kdialog compress 80% %F
 Icon=application-x-compressed-tar
 Name=Compress at 80%
 Name[it]=Comprimi al 80%
+Name[es]=Comprimir al 80%
+Name[ca]=Comprimir al 80%
 
 [Desktop Action compress_90]
 Exec=reimage-kdialog compress 90% %F
 Icon=application-x-compressed-tar
 Name=Compress at 90%
 Name[it]=Comprimi al 90%
+Name[es]=Comprimir al 90%
+Name[ca]=Comprimir al 90%
 
 [Desktop Action custom_compress]
 Exec=reimage-kdialog compress custom %F
 Icon=application-x-compressed-tar
 Name=Custom quality
 Name[it]=Qualità personalizzata
+Name[es]=Calidad personalizada
+Name[ca]=Qualitat personalitzada
 
 ################################################################################
 
@@ -83,18 +101,24 @@ Exec=reimage-kdialog resize 25% %F
 Icon=image-resize-symbolic
 Name=Resize at 25%
 Name[it]=Ridimensiona al 25%
+Name[es]=Redimensiona al 25%
+Name[ca]=Redimensiona al 25%
 
 [Desktop Action resize_50]
 Exec=reimage-kdialog resize 50% %F
 Icon=image-resize-symbolic
 Name=Resize at 50%
 Name[it]=Ridimensiona al 50%
+Name[es]=Redimensiona al 50%
+Name[ca]=Redimensiona al 50%
 
 [Desktop Action resize_75]
 Exec=reimage-kdialog resize 75% %F
 Icon=image-resize-symbolic
 Name=Resize at 75%
 Name[it]=Ridimensiona al 75%
+Name[es]=Redimensiona al 75%
+Name[ca]=Redimensiona al 75%
 
 ################################################################################
 
@@ -103,48 +127,64 @@ Exec=reimage-kdialog resize 300x225 %F
 Icon=image-resize-symbolic
 Name=Resize at 300x225 px
 Name[it]=Ridimensiona a 300x225 px
+Name[es]=Redimensiona a 300x225 px
+Name[ca]=Redimensiona a 300x225 px
 
 [Desktop Action 600x450]
 Exec=reimage-kdialog resize 600x450 %F
 Icon=image-resize-symbolic
 Name=Resize at 600x450 px
 Name[it]=Ridimensiona a 600x450 px
+Name[es]=Redimensiona a 600x450 px
+Name[ca]=Redimensiona a 600x450 px
 
 [Desktop Action 640x480]
 Exec=reimage-kdialog resize 640x480 %F
 Icon=image-resize-symbolic
 Name=Resize at 640x480 px
 Name[it]=Ridimensiona a 640x480 px
+Name[es]=Redimensiona a 640x480 px
+Name[ca]=Redimensiona a 640x480 px
 
 [Desktop Action 800x600]
 Exec=reimage-kdialog resize 800x600 %F
 Icon=image-resize-symbolic
 Name=Resize at 800x600 px
 Name[it]=Ridimensiona a 800x600 px
+Name[es]=Redimensiona a 800x600 px
+Name[ca]=Redimensiona a 800x600 px
 
 [Desktop Action 1024x768]
 Exec=reimage-kdialog resize 1024x768 %F
 Icon=image-resize-symbolic
 Name=Resize at 1024x768 px
 Name[it]=Ridimensiona a 1024x768 px
+Name[es]=Redimensiona a 1024x768 px
+Name[ca]=Redimensiona a 1024x768 px
 
 [Desktop Action 1200x900]
 Exec=reimage-kdialog resize 1200x900 %F
 Icon=image-resize-symbolic
 Name=Resize at 1200x900 px
 Name[it]=Ridimensiona a 1200x900 px
+Name[es]=Redimensiona a 1200x900 px
+Name[ca]=Redimensiona a 1200x900 px
 
 [Desktop Action 1400x1050]
 Exec=reimage-kdialog resize 1400x1050 %F
 Icon=image-resize-symbolic
 Name=Resize at 1400x1050 px
 Name[it]=Ridimensiona a 1400x1050 px
+Name[es]=Redimensiona a 1400x1050 px
+Name[ca]=Redimensiona a 1400x1050 px
 
 [Desktop Action 1920x1080]
 Exec=reimage-kdialog resize 1920x1080 %F
 Icon=image-resize-symbolic
 Name=Resize at 1920x1080 px
 Name[it]=Ridimensiona a 1920x1080 px
+Name[es]=Redimensiona a 1920x1080 px
+Name[ca]=Redimensiona a 1920x1080 px
 
 ################################################################################
 
@@ -153,3 +193,5 @@ Exec=reimage-kdialog resize custom %F
 Icon=image-resize-symbolic
 Name=Custom resize
 Name[it]=Ridimensionamento personalizzato
+Name[es]=Redimensionamiento personalizado
+Name[ca]=Redimensionament personalitzat
