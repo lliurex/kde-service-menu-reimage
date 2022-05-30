@@ -20,7 +20,7 @@
 Actions=rotate_90;rotate_180;rotate_270;rotate_custom;auto;_SEPARATOR_;flip;flop;_SEPARATOR_;
 MimeType=image/png;image/jpeg;image/gif;image/tiff;image/x-icon;image/x-ms-bmp;
 Name=ReImage rotate service menu
-ServiceTypes=KonqPopupMenu/Plugin
+ServiceTypes=KonqPopupMenu/Plugin,image/png,image/jpeg,image/gif,image/tiff,image/x-icon,image/x-ms-bmp
 TryExec=reimage-kdialog
 Type=Service
 X-KDE-Submenu=ReImage - Rotate
