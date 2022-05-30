@@ -20,7 +20,7 @@
 Actions=agif;append_right;_SEPARATOR_;gray;sepia;transparent2color;_SEPARATOR_;border;border_transparent;shadow;_SEPARATOR_;
 MimeType=image/png;image/jpeg;image/gif;image/tiff;image/x-icon;image/x-ms-bmp;
 Name=ReImage tools service menu
-ServiceTypes=KonqPopupMenu/Plugin
+ServiceTypes=KonqPopupMenu/Plugin,image/png,image/jpeg,image/gif,image/tiff,image/x-icon,image/x-ms-bmp
 TryExec=reimage-kdialog
 Type=Service
 X-KDE-Submenu=ReImage - Tools
