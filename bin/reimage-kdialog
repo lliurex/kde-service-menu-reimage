@@ -31,6 +31,9 @@ load_language_en_US () {
 	msg_common_montage_not_found_text="Software ImageMagick not found! Please, install it."
 	msg_common_jhead_not_found_text="Software jhead not found! Please, install it."
 	msg_common_webp_not_found_text="Software webp not found! Please, install it."
+	msg_common_mktemp_not_found_text="Software mktemp not found! Please, install it."
+	msg_common_identify_not_found_text="Software identify not found! Please, install it."
+	msg_common_inkscape_not_found_text="Software rsvg-convert not found! Please, install it."
 	msg_common_action_not_found_text="The requested action is not implemented."
 	msg_common_overwrite_text="In case the images to be saved have the same name as those to be processed,${new_line}do you want to overwrite them?"
 	msg_common_abort="Operation interrupted by the user."
@@ -149,6 +152,9 @@ load_language_it () {
 	msg_common_montage_not_found_text="Il software ImageMagick non è stato trovato! Per favore, installalo."
 	msg_common_jhead_not_found_text="Il software jhead non è stato trovato! Per favore, installalo."
 	msg_common_webp_not_found_text="Il software webp non è stato trovato! Per favore, installalo."
+	msg_common_mktemp_not_found_text="Il software mktemp non è stato trovato! Per favore, installalo."
+	msg_common_identify_not_found_text="Il software identify non è stato trovato! Per favore, installalo."
+	msg_common_inkscape_not_found_text="Il software inkscape non è stato trovato! Per favore, installalo"
 	msg_common_action_not_found_text="L'azione richiesta non è implementata."
 	msg_common_overwrite_text="Nel caso che le immagini da salvare abbiano lo stesso nome di quelle da elaborare,${new_line}vuoi sovrascriverle?"
 	msg_common_abort="Operazione interrotta dall'utente."
@@ -636,7 +642,29 @@ run_colorspace () {
 	return $?
 }
 
+check_svg () {
+	if [ "${ext}" = "svg" ]; then
+		tmp_file=$("${mktemp_bin}")
+		mv "${tmp_file}" "${tmp_file}.png"
+		tmp_file="${tmp_file}.png"
+		[ -f "${tmp_file}" ] && msg=$("${inkscape_bin}" -o "${tmp_file}" "${input}" 2>&1 ) && input=${tmp_file}
+
+		[ "$(${identify_bin} ${input}| cut -d' ' -f2)" = "SVG" ] && echo $msg && return 1
+
+		[ "${format}" != "png" ] && msg=$("${convert_bin}" -format "${format}" "${input}" "${input}.${format}" 2>&1) && input="${input}.${format}"
+
+		if [ "${overwrite}" != true ] && [ -f "${dir}/${base}.${format}" ]; then
+			mv ${input} ${dir}/${base}_converted.${format}
+		else
+			mv ${input} ${dir}/${base}.${format}
+		fi
+	fi
+}
+
 run_convert () {
+	check_svg
+	ret=$?
+	[ "${ext}" = "svg" ] && return $ret
 	if [ "${overwrite}" != true ] && [ "${ext}" = "${format}" ]; then
 		msg=$("${convert_bin}" -format "${format}" "${input}" "${dir}/${base}_converted.${format}" 2>&1)
 	else
@@ -1298,6 +1326,18 @@ jhead_bin=$(which jhead)
 webp_bin=$(which webpinfo)
 [ -z "${webp_bin}" ] && \
 	"${kdialog_bin}" --title "${msg_common_software_not_found_title}" --icon configure --error "${msg_common_webp_not_found_text}" && exit 2
+
+mktemp_bin=$(which mktemp)
+[ -z "${mktemp_bin}" ] && \
+	"${kdialog_bin}" --title "${msg_common_software_not_found_title}" --icon configure --error "${msg_common_mktemp_not_found_text}" && exit 2
+
+identify_bin=$(which identify)
+[ -z "${identify_bin}" ] && \
+	"${kdialog_bin}" --title "${msg_common_software_not_found_title}" --icon configure --error "${msg_common_identify_not_found_text}" && exit 2
+
+inkscape_bin=$(which inkscape)
+[ -z "${inkscape_bin}" ] && \
+	"${kdialog_bin}" --title "${msg_common_software_not_found_title}" --icon configure --error "${msg_common_inkscape_not_found_text}" && exit 2
 
 action="${1}"
 shift
