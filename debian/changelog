@@ -1,3 +1,9 @@
+kde-service-menu-reimage (2.5.5-23) jammy; urgency=medium
+
+  * First jammy release 
+
+ -- Hector Garcia Huerta <hectorgh@gmail.com>  Mon, 24 Jun 2024 08:34:08 +0200
+
 kde-service-menu-reimage (2.5.5) focal; urgency=medium
 
   * Fix missing merge
