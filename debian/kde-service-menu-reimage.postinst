@@ -22,7 +22,7 @@ case "$1" in
     configure)
         echo "Fixing imagemagick policy for PDF"
         sed -i -r -e 's|^\s+(<policy domain="coder" rights="none" pattern="PDF" />)\s*$|<!-- \1 -->|g' /etc/ImageMagick-6/policy.xml || true
-	kbuildsycoca5 >/dev/null 2>&1 || true
+	kbuildsycoca6 >/dev/null 2>&1 || true
     ;;
 
     abort-upgrade|abort-remove|abort-deconfigure)
